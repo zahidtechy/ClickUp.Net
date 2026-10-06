@@ -1,0 +1,35 @@
+name: Publish to NuGet
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Test
+        run: dotnet test ClickUp.Net.sln --configuration Release
+
+      - name: Pack
+        run: dotnet pack src/ClickUp.Net/ClickUp.Net.csproj --configuration Release --output ./artifacts
+
+      - name: NuGet login
+        id: login
+        uses: NuGet/login@v1
+        with:
+          user: zahid94
+
+      - name: Push package
+        run: dotnet nuget push ./artifacts/*.nupkg --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate

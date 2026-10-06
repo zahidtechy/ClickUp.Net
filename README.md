@@ -10,7 +10,7 @@ The library sends authentication, builds request URLs, serializes JSON, and surf
 dotnet add package ClickUp.Net
 ```
 
-Before publishing the package, replace the placeholder `Authors` value in `src/ClickUp.Net/ClickUp.Net.csproj` and add a repository URL and license that match your project. Those values are intentionally unset.
+The package is licensed under the MIT License.
 
 ## Personal-token setup
 

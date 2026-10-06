@@ -13,7 +13,11 @@
     <PackageId>ClickUp.Net</PackageId>
     <Title>ClickUp.Net</Title>
     <Description>A strongly typed .NET 6 client library for the ClickUp API v2.</Description>
-    <Authors>Unspecified</Authors>
+    <Authors>zahid94</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/zahidtechy/ClickUp.Net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/zahidtechy/ClickUp.Net</PackageProjectUrl>
     <PackageTags>clickup;api;sdk;dotnet;net6;nuget</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>README.md</PackageReadmeFile>
