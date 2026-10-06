@@ -1,0 +1,9 @@
+bin/
+obj/
+.vs/
+*.user
+TestResults/
+_openapi.json
+_summarize.js
+_dump.js
+_ops.txt
